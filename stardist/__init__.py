@@ -18,7 +18,7 @@ from .plot.plot import random_label_cmap, draw_polygons, _draw_polygons
 from .plot.render import render_label, render_label_pred
 from .rays3d import rays_from_json, Rays_Cartesian, Rays_SubDivide, Rays_Tetra, Rays_Octo, Rays_GoldenSpiral, Rays_Explicit
 from .sample_patches import sample_patches
-from .bioimageio_utils import export_bioimageio, import_bioimageio
+# from .bioimageio_utils import export_bioimageio, import_bioimageio
 
 def _py_deprecation(ver_python=(3,6), ver_stardist=None):
     import sys

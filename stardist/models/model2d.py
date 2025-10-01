@@ -219,6 +219,8 @@ class Config2D(BaseConfig):
             self.unet_dropout          = 0.0
             self.unet_prefix           = ''
             self.net_conv_after_unet   = 128
+            self.unet_block_type            = 'vanilla'
+            self.unet_use_se                = False
         else:
             # TODO: resnet backbone for 2D model?
             raise ValueError("backbone '%s' not supported." % self.backbone)
@@ -310,6 +312,8 @@ class StarDist2D(StarDistBase):
     def _build(self):
         self.config.backbone == 'unet' or _raise(NotImplementedError())
         unet_kwargs = {k[len('unet_'):]:v for (k,v) in vars(self.config).items() if k.startswith('unet_')}
+
+        print(unet_kwargs)
 
         input_img = Input(self.config.net_input_shape, name='input')
 
