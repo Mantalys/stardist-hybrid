@@ -144,7 +144,7 @@ def unet_block(n_depth=2, n_filter_base=16, kernel_size=(3,3), n_conv_per_depth=
                prefix='',
                block_type="vanilla",
                use_se=False):
-
+    
     if len(pool) != len(kernel_size):
         raise ValueError('kernel and pool sizes must match.')
     n_dim = len(kernel_size)

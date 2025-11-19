@@ -3,23 +3,23 @@ name = "stardist-hybrid"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.12"
+requires-python = ">=3.11"
 dependencies = [
-    "csbdeep>=0.8.1",
-    "instanseg-torch>=0.0.6",
-    "numba>=0.62.1",
-    "numpy<2.0.0",
-    "onnx>=1.19.0",
-    "onnxruntime>=1.23.2",
-    "opencv-python>=4.11.0.86",
-    "polars>=1.28.1",
-    "pydantic>=2.11.3",
-    "scikit-image>=0.25.2",
-    "tensorflow>=2.18.1",
-    "tf2onnx>=1.8.4",
-    "tifffile>=2025.3.30",
+    "csbdeep",
+    "instanseg-torch",
+    "keras",
+    "numba",
+    "numpy",
+    "onnx",
+    "onnxruntime",
+    "opencv-python",
+    "polars",
+    "pydantic",
+    "scikit-image",
+    "tensorflow",
+    "tf2onnx",
+    "tifffile",
 ]
 
-# define src path for "stardist-hybrid" package
-[tool.poetry.packages]
-include = "src/stardist_hybrid"
+[tool.uv.extra-build-dependencies]
+stardist-hybrid = ["numpy"]
