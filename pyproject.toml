@@ -16,6 +16,7 @@ dependencies = [
     "polars",
     "pydantic",
     "scikit-image",
+    "scipy>=1.16.3",
     "tensorflow",
     "tf2onnx",
     "tifffile",
